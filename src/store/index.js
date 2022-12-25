@@ -5,7 +5,7 @@ import logger from "redux-logger";
 import { rootReducer } from "./rootReducer";
 import { todoListAdd } from "./todoList";
 
-const enhancer = compose(applyMiddleware(logger), persistState());
+const enhancer = compose(applyMiddleware(logger)/*, persistState()*/);
 export const store = createStore(rootReducer, enhancer);
 
 const id = setInterval(() => {
